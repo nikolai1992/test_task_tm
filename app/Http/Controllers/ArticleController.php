@@ -15,8 +15,9 @@ class ArticleController extends Controller
         return view('home', compact('articles'));
     }
 
-    public function read($id)
+    public function read(Request $request)
     {
+        $id = $request->id;
         $article = Article::findOrFail($id);
 
         return view('article', compact('article'));

@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\ArticleController::class, "index"]);
-Route::get('/{id}', [\App\Http\Controllers\ArticleController::class, "read"])->name('article.read');
+Route::get('/item', [\App\Http\Controllers\ArticleController::class, "read"])->name('article.read');
 
 Auth::routes();

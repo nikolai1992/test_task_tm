@@ -17,7 +17,7 @@
                                 <div class="w-100">
                                     <img src="{{ $article->image }}" class="w-100">
                                 </div>
-                                <p><a href="{{ route('article.read', $article->id) }}">{{ $article->name }}</a></p>
+                                <p><a href="{{ route('article.read') . "?id=" . $article->id }}">{{ $article->name }}</a></p>
                                 <p>{{ $article->short_description }}</p>
                                 <p><span>{{ Carbon\Carbon::parse($article->date_in)->format('Y-m-d H:i') }}</span></p>
                                 <br>
